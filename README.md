@@ -11,7 +11,7 @@ Welcome to the **Design & Analysis of Algorithms (DAA)** laboratory practicals r
 
 ## 📂 Repository Structure
 
-The practicals are organized into three dedicated modules:
+The practicals are organized into four dedicated modules:
 
 ```text
 DAA-Practicals/
@@ -24,13 +24,17 @@ DAA-Practicals/
 │   └── README.md              # Detailed documentation for Practical 1
 │
 ├── practical_2/               # Practical 2: Searching Algorithms & Time Measurement
-│   ├── binary_search.py       # Binary Search (Logarithmic logarithmic search)
+│   ├── binary_search.py       # Binary Search (Logarithmic search)
 │   ├── linear_search.py       # Linear Search (Sequential search)
 │   └── README.md              # Detailed documentation for Practical 2
 │
 ├── practical_3/               # Practical 3: Heap Data Structures & Operations
 │   ├── max_heap.py            # Max Heap (Heapify, Build Heap, Insert, Delete)
 │   └── README.md              # Detailed documentation for Practical 3
+│
+├── practical_4/               # Practical 4: Factorial (Iterative vs. Recursive Analysis)
+│   ├── factorial.py           # Iterative and Recursive Factorial implementations
+│   └── README.md              # Detailed documentation for Practical 4
 │
 └── README.md                  # Main Repository Overview & Documentation
 ```
@@ -68,6 +72,14 @@ Demonstrates tree-based priority queue construction and manipulation routines.
 | **Insert Element** | $\mathcal{O}(\log n)$ | $\mathcal{O}(1)$ | Adds item and sifts upward | [`max_heap.py`](file:///practical_3/max_heap.py) |
 | **Delete Maximum** | $\mathcal{O}(\log n)$ | $\mathcal{O}(\log n)$ | Extracts root item & restores heap | [`max_heap.py`](file:///practical_3/max_heap.py) |
 
+### 4️⃣ Practical 4: Factorial Calculation (Iterative vs. Recursive)
+Compares iterative accumulation versus recursive divide-and-conquer function calls for computing factorial numbers.
+
+| Approach | Best Case | Average Case | Worst Case | Auxiliary Space | Paradigm | Script |
+| :--- | :---: | :---: | :---: | :---: | :--- | :---: |
+| **Iterative Factorial** | $\mathcal{O}(1)$ | $\mathcal{O}(n)$ | $\mathcal{O}(n)$ | $\mathcal{O}(1)$ | Iterative Accumulation | [`factorial.py`](file:///practical_4/factorial.py) |
+| **Recursive Factorial** | $\mathcal{O}(1)$ | $\mathcal{O}(n)$ | $\mathcal{O}(n)$ | $\mathcal{O}(n)$ | Recursive / Decrease-and-Conquer | [`factorial.py`](file:///practical_4/factorial.py) |
+
 ---
 
 ## 🚀 Quick Start Guide
@@ -102,6 +114,12 @@ cd practical_3
 python max_heap.py
 ```
 
+#### 🔹 Run Practical 4 (Factorial):
+```bash
+cd practical_4
+python factorial.py
+```
+
 ---
 
 ## ⚡ Key Insights & Empirical Findings
@@ -112,6 +130,8 @@ python max_heap.py
    - **Binary Search** outperforms Linear Search exponentially on large datasets, reducing search steps from $n$ to $\log_2(n)$.
 3. **Heap Structure Efficiency**:
    - Building a heap takes linear time $O(n)$, allowing fast construction of Priority Queues with $O(\log n)$ logarithmic insertion and deletion costs.
+4. **Recursion vs. Iteration Trade-offs**:
+   - Both iterative and recursive factorial achieve $O(n)$ time complexity, but the iterative version is strictly more space-efficient ($O(1)$ auxiliary space) by eliminating the $O(n)$ call stack frame overhead.
 
 ---
 
