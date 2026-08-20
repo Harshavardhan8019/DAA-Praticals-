@@ -36,6 +36,10 @@ DAA-Practicals/
 │   ├── factorial.py           # Iterative and Recursive Factorial implementations
 │   └── README.md              # Detailed documentation for Practical 4
 │
+├── practical_7/               # Practical 7: Coin Change Problem (Greedy vs. DP Analysis)
+│   ├── coin_change.py         # Greedy vs Dynamic Programming Coin Change
+│   └── README.md              # Detailed documentation for Practical 7
+│
 └── README.md                  # Main Repository Overview & Documentation
 ```
 
@@ -80,6 +84,14 @@ Compares iterative accumulation versus recursive divide-and-conquer function cal
 | **Iterative Factorial** | $\mathcal{O}(1)$ | $\mathcal{O}(n)$ | $\mathcal{O}(n)$ | $\mathcal{O}(1)$ | Iterative Accumulation | [`factorial.py`](file:///practical_4/factorial.py) |
 | **Recursive Factorial** | $\mathcal{O}(1)$ | $\mathcal{O}(n)$ | $\mathcal{O}(n)$ | $\mathcal{O}(n)$ | Recursive / Decrease-and-Conquer | [`factorial.py`](file:///practical_4/factorial.py) |
 
+### 5️⃣ Practical 7: Coin Change Problem (Greedy vs. Dynamic Programming)
+Compares Greedy Choice strategy against 2D Dynamic Programming Tabulation for making change with minimum coins.
+
+| Approach | Best Case | Average Case | Worst Case | Space Complexity | Paradigm | Script |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Greedy Change** | $\mathcal{O}(n \log n)$ | $\mathcal{O}(n \log n)$ | $\mathcal{O}(n \log n)$ | $\mathcal{O}(1)$ | Greedy Choice | [`coin_change.py`](file:///practical_7/coin_change.py) |
+| **DP Change** | $\mathcal{O}(n \times \text{amount})$ | $\mathcal{O}(n \times \text{amount})$ | $\mathcal{O}(n \times \text{amount})$ | $\mathcal{O}(n \times \text{amount})$ | Dynamic Programming | [`coin_change.py`](file:///practical_7/coin_change.py) |
+
 ---
 
 ## 🚀 Quick Start Guide
@@ -120,6 +132,12 @@ cd practical_4
 python factorial.py
 ```
 
+#### 🔹 Run Practical 7 (Coin Change):
+```bash
+cd practical_7
+python coin_change.py
+```
+
 ---
 
 ## ⚡ Key Insights & Empirical Findings
@@ -132,6 +150,8 @@ python factorial.py
    - Building a heap takes linear time $O(n)$, allowing fast construction of Priority Queues with $O(\log n)$ logarithmic insertion and deletion costs.
 4. **Recursion vs. Iteration Trade-offs**:
    - Both iterative and recursive factorial achieve $O(n)$ time complexity, but the iterative version is strictly more space-efficient ($O(1)$ auxiliary space) by eliminating the $O(n)$ call stack frame overhead.
+5. **Greedy vs. Dynamic Programming Trade-offs**:
+   - For Coin Change, **Greedy Choice** is fast ($\mathcal{O}(n \log n)$) but fails to guarantee global optimality on arbitrary coin denominations. **Dynamic Programming** guarantees an optimal minimum coin solution ($\mathcal{O}(n \times \text{amount})$) at the cost of pseudo-polynomial time and 2D table space overhead.
 
 ---
 
@@ -140,3 +160,4 @@ python factorial.py
 Developed and maintained by **Harshavardhan**  
 GitHub: [@Harshavardhan8019](https://github.com/Harshavardhan8019)  
 Repository: [DAA-Praticals-](https://github.com/Harshavardhan8019/DAA-Praticals-)
+
