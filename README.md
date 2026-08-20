@@ -40,6 +40,10 @@ DAA-Practicals/
 │   ├── coin_change.py         # Greedy vs Dynamic Programming Coin Change
 │   └── README.md              # Detailed documentation for Practical 7
 │
+├── practical_8/               # Practical 8: Graph Traversal Algorithms (DFS & BFS)
+│   ├── graph_traversal.py     # Depth-First Search & Breadth-First Search
+│   └── README.md              # Detailed documentation for Practical 8
+│
 └── README.md                  # Main Repository Overview & Documentation
 ```
 
@@ -92,6 +96,14 @@ Compares Greedy Choice strategy against 2D Dynamic Programming Tabulation for ma
 | **Greedy Change** | $\mathcal{O}(n \log n)$ | $\mathcal{O}(n \log n)$ | $\mathcal{O}(n \log n)$ | $\mathcal{O}(1)$ | Greedy Choice | [`coin_change.py`](file:///practical_7/coin_change.py) |
 | **DP Change** | $\mathcal{O}(n \times \text{amount})$ | $\mathcal{O}(n \times \text{amount})$ | $\mathcal{O}(n \times \text{amount})$ | $\mathcal{O}(n \times \text{amount})$ | Dynamic Programming | [`coin_change.py`](file:///practical_7/coin_change.py) |
 
+### 6️⃣ Practical 8: Graph Traversal Algorithms (DFS & BFS)
+Implements and evaluates Depth-First Search and Breadth-First Search on Adjacency List graphs.
+
+| Algorithm | Time Complexity | Space Complexity | Data Structure | Paradigm | Script |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Depth-First Search (DFS)** | $\mathcal{O}(V + E)$ | $\mathcal{O}(V)$ | Recursion Stack | Backtracking | [`graph_traversal.py`](file:///practical_8/graph_traversal.py) |
+| **Breadth-First Search (BFS)** | $\mathcal{O}(V + E)$ | $\mathcal{O}(V)$ | FIFO Queue (`deque`) | Level-Order | [`graph_traversal.py`](file:///practical_8/graph_traversal.py) |
+
 ---
 
 ## 🚀 Quick Start Guide
@@ -138,6 +150,12 @@ cd practical_7
 python coin_change.py
 ```
 
+#### 🔹 Run Practical 8 (Graph Traversal):
+```bash
+cd practical_8
+python graph_traversal.py
+```
+
 ---
 
 ## ⚡ Key Insights & Empirical Findings
@@ -152,6 +170,8 @@ python coin_change.py
    - Both iterative and recursive factorial achieve $O(n)$ time complexity, but the iterative version is strictly more space-efficient ($O(1)$ auxiliary space) by eliminating the $O(n)$ call stack frame overhead.
 5. **Greedy vs. Dynamic Programming Trade-offs**:
    - For Coin Change, **Greedy Choice** is fast ($\mathcal{O}(n \log n)$) but fails to guarantee global optimality on arbitrary coin denominations. **Dynamic Programming** guarantees an optimal minimum coin solution ($\mathcal{O}(n \times \text{amount})$) at the cost of pseudo-polynomial time and 2D table space overhead.
+6. **Graph Traversal Paradigms**:
+   - **DFS** traverses deeply along graph branches using recursion stack frames, making it ideal for path-finding, topological ordering, and cycle detection. **BFS** explores radially level-by-level using a queue, guaranteeing the shortest path in unweighted graphs. Both achieve optimal linear time complexity $\mathcal{O}(V + E)$.
 
 ---
 
@@ -160,4 +180,5 @@ python coin_change.py
 Developed and maintained by **Harshavardhan**  
 GitHub: [@Harshavardhan8019](https://github.com/Harshavardhan8019)  
 Repository: [DAA-Praticals-](https://github.com/Harshavardhan8019/DAA-Praticals-)
+
 
